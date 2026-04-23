@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO PRIMARY ===== -->
+  <title>Sabor a Tierra | Gastronomía de Origen, Raíz y Proceso</title>
+  <meta name="description" content="Sabor a Tierra es una experiencia gastronómica que rescata el origen, respeta el proceso y celebra lo auténtico. Ingredientes de raíz, sabor real. Muy pronto en México." />
+  <meta name="keywords" content="gastronomía de origen, cocina mexicana auténtica, ingredientes de raíz, restaurante México, sabor a tierra, cocina artesanal" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Sabor a Tierra" />
+  <link rel="canonical" href="https://saboratierra.com.mx/" />
+
+  <!-- ===== OPEN GRAPH (redes sociales) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saboratierra.com.mx/" />
+  <meta property="og:title" content="Sabor a Tierra | Gastronomía de Origen y Raíz" />
+  <meta property="og:description" content="No es solo comida. Es raíz. Sabor a Tierra rescata la esencia de los ingredientes y el respeto por el proceso. Muy pronto." />
+  <meta property="og:image" content="https://saboratierra.com.mx/og-image.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Sabor a Tierra" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sabor a Tierra | Gastronomía de Origen" />
+  <meta name="twitter:description" content="Donde nace lo auténtico, lo real… lo que se respeta. Muy pronto." />
+  <meta name="twitter:image" content="https://saboratierra.com.mx/og-image.jpg" />
+
+  <!-- ===== SCHEMA.ORG STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Sabor a Tierra",
+    "description": "Gastronomía de origen que rescata el valor de los ingredientes auténticos y el respeto por el proceso.",
+    "url": "https://saboratierra.com.mx",
+    "servesCuisine": "Mexicana de autor",
+    "priceRange": "$$",
+    "openingHoursSpecification": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "MX"
+    },
+    "sameAs": [
+      "https://www.instagram.com/saboratierra"
+    ]
+  }
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ RESET & BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #080705;
+      --dark:     #111009;
+      --mud:      #1c1a14;
+      --stone:    #2a2720;
+      --cream:    #f0e8d8;
+      --sand:     #c8b89a;
+      --ochre:    #b07d3a;
+      --terra:    #8b4513;
+      --olive:    #5c6645;
+      --white:    #faf7f2;
+      --ff-head:  'Playfair Display', Georgia, serif;
+      --ff-body:  'Raleway', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background-color: var(--black);
+      color: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============ NOISE TEXTURE OVERLAY ============ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ============ UTILITIES ============ */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .label {
+      font-family: var(--ff-body);
+      font-size: 0.6875rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(8,7,5,0.9) 0%, transparent 100%);
+    }
+
+    .nav-logo {
+      font-family: var(--ff-head);
+      font-style: italic;
+      font-size: 1.125rem;
+      letter-spacing: 0.04em;
+      color: var(--cream);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sand);
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+
+    /* ============ HERO ============ */
+    #hero {
+      position: relative;
+      height: 100svh;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(8,7,5,0.55) 0%, rgba(8,7,5,0.3) 40%, rgba(8,7,5,0.85) 100%),
+        url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+      transform: scale(1.04);
+      animation: heroScale 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroScale {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.00); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--ff-head);
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 300;
+      color: var(--sand);
+      letter-spacing: 0.04em;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid rgba(200, 184, 154, 0.5);
+      padding: 0.875rem 2.5rem;
+      font-family: var(--ff-body);
+      font-size: 0.6875rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cream);
+      transition: background 0.4s, color 0.4s, border-color 0.4s;
+      cursor: default;
+    }
+    .btn-outline:hover {
+      background: var(--cream);
+      color: var(--black);
+      border-color: var(--cream);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 2;
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+
+    .hero-scroll span {
+      font-size: 0.5625rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sand);
+      opacity: 0.7;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--sand), transparent);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ============ SECTION BASE ============ */
+    section { position: relative; }
+
+    .section-pad { padding: 8rem 0; }
+
+    /* ============ MANIFIESTO ============ */
+    #manifiesto {
+      background-color: var(--dark);
+      padding: 8rem 0;
+    }
+
+    .manifiesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .manifiesto-text h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .manifiesto-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--sand);
+      font-weight: 300;
+    }
+
+    .manifiesto-quote {
+      border-left: 2px solid var(--ochre);
+      padding: 2rem 2.5rem;
+      background: var(--mud);
+    }
+
+    .manifiesto-quote blockquote {
+      font-family: var(--ff-head);
+      font-style: italic;
+      font-size: 1.375rem;
+      line-height: 1.6;
+      color: var(--cream);
+    }
+
+    .manifiesto-quote cite {
+      display: block;
+      margin-top: 1.25rem;
+      font-family: var(--ff-body);
+      font-size: 0.625rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ochre);
+      font-style: normal;
+    }
+
+    /* ============ ESENCIA (3 PILARES) ============ */
+    #esencia {
+      background-color: var(--mud);
+      padding: 8rem 0;
+    }
+
+    .esencia-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .esencia-header h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--cream);
+      margin-top: 1rem;
+    }
+
+    .pilares {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .pilar {
+      padding: 3rem 2.5rem;
+      border-top: 1px solid rgba(200, 184, 154, 0.12);
+      border-right: 1px solid rgba(200, 184, 154, 0.12);
+      transition: background 0.4s;
+    }
+
+    .pilar:last-child { border-right: none; }
+    .pilar:hover { background: rgba(176, 125, 58, 0.06); }
+
+    .pilar-num {
+      font-family: var(--ff-head);
+      font-size: 3rem;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--stone);
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .pilar h3 {
+      font-family: var(--ff-head);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.875rem;
+    }
+
+    .pilar p {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: rgba(200, 184, 154, 0.7);
+      font-weight: 300;
+    }
+
+    /* ============ IMAGEN CENTRAL ============ */
+    #imagen {
+      height: 80vh;
+      min-height: 500px;
+      background:
+        linear-gradient(to bottom, rgba(8,7,5,1) 0%, rgba(8,7,5,0.1) 20%, rgba(8,7,5,0.1) 80%, rgba(8,7,5,1) 100%),
+        url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .imagen-quote {
+      text-align: center;
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    .imagen-quote p {
+      font-family: var(--ff-head);
+      font-style: italic;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      line-height: 1.4;
+      color: var(--white);
+    }
+
+    /* ============ EXPERIENCIA ============ */
+    #experiencia {
+      background-color: var(--dark);
+      padding: 8rem 0;
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 6rem;
+      align-items: end;
+    }
+
+    .exp-text h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    .exp-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--sand);
+      font-weight: 300;
+    }
+
+    .exp-aside {
+      border-top: 1px solid var(--ochre);
+      padding-top: 2rem;
+    }
+
+    .exp-aside p {
+      font-family: var(--ff-head);
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--cream);
+    }
+
+    /* ============ PRÓXIMAMENTE (CTA) ============ */
+    #proximo {
+      background-color: var(--black);
+      padding: 10rem 0;
+      text-align: center;
+    }
+
+    #proximo h2 {
+      font-family: var(--ff-head);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    #proximo p {
+      font-size: 1.0625rem;
+      color: var(--sand);
+      font-weight: 300;
+      margin-bottom: 3.5rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.75;
+    }
+
+    /* ===== EMAIL FORM ===== */
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 420px;
+      margin: 0 auto;
+      border: 1px solid rgba(200, 184, 154, 0.25);
+    }
+
+    .email-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0.875rem 1.25rem;
+      font-family: var(--ff-body);
+      font-size: 0.875rem;
+      color: var(--cream);
+      letter-spacing: 0.04em;
+    }
+
+    .email-form input::placeholder { color: rgba(200,184,154,0.35); }
+
+    .email-form button {
+      background: var(--ochre);
+      border: none;
+      padding: 0.875rem 1.5rem;
+      font-family: var(--ff-body);
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+
+    .email-form button:hover { background: var(--terra); }
+
+    .form-note {
+      margin-top: 1rem;
+      font-size: 0.625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(200, 184, 154, 0.35);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background-color: var(--mud);
+      border-top: 1px solid rgba(200, 184, 154, 0.08);
+      padding: 4rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--ff-head);
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--cream);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.625rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sand);
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    .footer-links a:hover { opacity: 1; }
+
+    .footer-copy {
+      font-size: 0.5625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(200, 184, 154, 0.2);
+    }
+
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(200, 184, 154, 0.15);
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 768px) {
+      .manifiesto-grid,
+      .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+      .pilares { grid-template-columns: 1fr; }
+      .pilar { border-right: none; border-bottom: 1px solid rgba(200,184,154,0.1); }
+      .pilar:last-child { border-bottom: none; }
+
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav aria-label="Navegación principal">
+    <span class="nav-logo">Sabor a Tierra</span>
+    <ul class="nav-links">
+      <li><a href="#manifiesto">Origen</a></li>
+      <li><a href="#esencia">Esencia</a></li>
+      <li><a href="#proximo">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero" role="banner">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="label hero-eyebrow">No es solo comida. Es raíz.</p>
+      <h1>Sabor a Tierra</h1>
+      <p class="hero-sub">Ahí donde nace lo auténtico,<br>lo real… lo que se respeta.</p>
+      <span class="btn-outline" role="status" aria-label="Próximamente">Muy pronto</span>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ===== MANIFIESTO ===== -->
+  <section id="manifiesto" aria-labelledby="manifiesto-title">
+    <div class="container">
+      <div class="manifiesto-grid">
+        <div class="manifiesto-text">
+          <p class="label" style="margin-bottom:1.25rem;">Nuestra historia</p>
+          <h2 id="manifiesto-title">Volver al origen.</h2>
+          <p>
+            Sabor a Tierra nace de una idea simple pero poderosa: rescatar lo que siempre debió importar.
+            Creemos en el valor de hacer las cosas bien desde el inicio, respetando el proceso y el tiempo
+            que cada ingrediente necesita para llegar a su mejor versión.
+          </p>
+          <p style="margin-top:1.25rem;">
+            No seguimos tendencias. Seguimos la tierra, las temporadas, los productores que aún guardan
+            el conocimiento de generaciones pasadas.
+          </p>
+        </div>
+        <div class="manifiesto-quote">
+          <blockquote>
+            "No seguimos tendencias.<br>Rescatamos la esencia."
+          </blockquote>
+          <cite>— Sabor a Tierra</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESENCIA / PILARES ===== -->
+  <section id="esencia" aria-labelledby="esencia-title">
+    <div class="container">
+      <div class="esencia-header">
+        <p class="label">Lo que nos define</p>
+        <h2 id="esencia-title">Nuestra esencia</h2>
+      </div>
+      <div class="pilares" role="list">
+        <article class="pilar" role="listitem">
+          <div class="pilar-num" aria-hidden="true">01</div>
+          <h3>Selección</h3>
+          <p>Cada elemento es elegido por su pureza y conexión con el suelo. Trabajamos con productores que cuidan la tierra como si fuera propia porque lo es.</p>
+        </article>
+        <article class="pilar" role="listitem">
+          <div class="pilar-num" aria-hidden="true">02</div>
+          <h3>Cuidado</h3>
+          <p>Transformamos sin destruir, manteniendo la historia de cada ingrediente. El proceso es tan importante como el resultado.</p>
+        </article>
+        <article class="pilar" role="listitem">
+          <div class="pilar-num" aria-hidden="true">03</div>
+          <h3>Mesa</h3>
+          <p>Entendemos que lo que disfrutas empieza mucho antes de servirlo. La experiencia nace en el campo y termina en tu paladar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGEN CENTRAL ===== -->
+  <div id="imagen" role="img" aria-label="Fotografía de un platillo artesanal representando la filosofía de Sabor a Tierra">
+    <div class="imagen-quote">
+      <p>"Lo mejor aún está por salir de la tierra."</p>
+    </div>
+  </div>
+
+  <!-- ===== EXPERIENCIA ===== -->
+  <section id="experiencia" aria-labelledby="exp-title">
+    <div class="container">
+      <div class="exp-grid">
+        <div class="exp-text">
+          <p class="label" style="margin-bottom:1.25rem;">La experiencia</p>
+          <h2 id="exp-title">Una experiencia real.<br>Sin atajos.</h2>
+          <p>
+            No vienes solo a consumir. Vienes a conectar con lo auténtico, con lo que tiene historia.
+            Cada detalle está pensado para recordarte de dónde viene todo lo que ves en tu plato.
+          </p>
+          <p style="margin-top:1.25rem;">
+            La gastronomía de raíz no es nostalgia. Es responsabilidad. Es entender que cada bocado
+            es el resultado de trabajo, tierra y tiempo invertidos con intención.
+          </p>
+        </div>
+        <div class="exp-aside">
+          <p>"Creemos en el valor de hacer las cosas bien desde el inicio."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRÓXIMAMENTE / CTA ===== -->
+  <section id="proximo" aria-labelledby="proximo-title">
+    <div class="container">
+      <p class="label" style="margin-bottom:1.25rem;">Esto apenas comienza</p>
+      <h2 id="proximo-title">Muy pronto.</h2>
+      <p>
+        Sé el primero en saber cuándo abrimos.<br>
+        Déjanos tu correo y te avisamos.
+      </p>
+
+      <form class="email-form" action="#" method="post" aria-label="Formulario para recibir novedades">
+        <label for="email-input" class="visually-hidden">Correo electrónico</label>
+        <input
+          id="email-input"
+          type="email"
+          name="email"
+          placeholder="tu@correo.com"
+          required
+          autocomplete="email"
+          aria-required="true"
+        />
+        <button type="submit">Avisar</button>
+      </form>
+      <p class="form-note">Sin spam. Solo lo que importa.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-logo">Sabor a Tierra</span>
+      <div class="footer-divider"></div>
+      <ul class="footer-links" aria-label="Redes sociales y contacto">
+        <li><a href="https://www.instagram.com/saboratierra" rel="noopener noreferrer" target="_blank" aria-label="Instagram de Sabor a Tierra">Instagram</a></li>
+        <li><a href="mailto:hola@saboratierra.com.mx" aria-label="Correo de contacto">Contacto</a></li>
+      </ul>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">Sabor a Tierra &copy; 2026 &nbsp;·&nbsp; México &nbsp;·&nbsp; Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ===== VISUALLY HIDDEN (accesibilidad) ===== -->
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+  </style>
+
+  <!-- ===== SCROLL ANIMATION (sin dependencias) ===== -->
+  <script>
+    // Intersection Observer para fade-in en scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section > .container > *, .pilar').forEach(el => {
+      el.style.cssText += 'opacity:0; transform:translateY(24px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);';
+      observer.observe(el);
+    });
+
+    // Email form feedback
+    document.querySelector('.email-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      btn.textContent = '¡Listo!';
+      btn.style.background = '#5c6645';
+      this.querySelector('input').value = '';
+    });
+  </script>
+
+</body>
+</html>
