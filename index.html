@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== SEO PRIMARY ===== -->
   <title>Sabor a Tierra | Gastronomía de Origen, Raíz y Proceso</title>
   <meta name="description" content="Sabor a Tierra es una experiencia gastronómica que rescata el origen, respeta el proceso y celebra lo auténtico. Ingredientes de raíz, sabor real. Muy pronto en México." />
   <meta name="keywords" content="gastronomía de origen, cocina mexicana auténtica, ingredientes de raíz, restaurante México, sabor a tierra, cocina artesanal" />
@@ -12,22 +11,19 @@
   <meta name="author" content="Sabor a Tierra" />
   <link rel="canonical" href="https://saboratierra.com.mx/" />
 
-  <!-- ===== OPEN GRAPH (redes sociales) ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saboratierra.com.mx/" />
   <meta property="og:title" content="Sabor a Tierra | Gastronomía de Origen y Raíz" />
   <meta property="og:description" content="No es solo comida. Es raíz. Sabor a Tierra rescata la esencia de los ingredientes y el respeto por el proceso. Muy pronto." />
-  <meta property="og:image" content="https://saboratierra.com.mx/og-image.jpg" />
+  <meta property="og:image" content="https://i.imgur.com/vV4PzIv.jpeg" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="Sabor a Tierra" />
 
-  <!-- ===== TWITTER CARD ===== -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sabor a Tierra | Gastronomía de Origen" />
   <meta name="twitter:description" content="Donde nace lo auténtico, lo real… lo que se respeta. Muy pronto." />
-  <meta name="twitter:image" content="https://saboratierra.com.mx/og-image.jpg" />
+  <meta name="twitter:image" content="https://i.imgur.com/vV4PzIv.jpeg" />
 
-  <!-- ===== SCHEMA.ORG STRUCTURED DATA ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,7 +44,6 @@
   }
   </script>
 
-  <!-- ===== FONTS ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -160,7 +155,7 @@
       inset: 0;
       background:
         linear-gradient(to bottom, rgba(8,7,5,0.55) 0%, rgba(8,7,5,0.3) 40%, rgba(8,7,5,0.85) 100%),
-        url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+        url('https://i.imgur.com/vV4PzIv.jpeg') center / cover no-repeat;
       transform: scale(1.04);
       animation: heroScale 12s ease-in-out infinite alternate;
     }
@@ -182,9 +177,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-eyebrow {
-      margin-bottom: 1.5rem;
-    }
+    .hero-eyebrow { margin-bottom: 1.5rem; }
 
     h1 {
       font-family: var(--ff-head);
@@ -256,11 +249,6 @@
       50%       { transform: translateX(-50%) translateY(6px); }
     }
 
-    /* ============ SECTION BASE ============ */
-    section { position: relative; }
-
-    .section-pad { padding: 8rem 0; }
-
     /* ============ MANIFIESTO ============ */
     #manifiesto {
       background-color: var(--dark);
@@ -315,7 +303,7 @@
       font-style: normal;
     }
 
-    /* ============ ESENCIA (3 PILARES) ============ */
+    /* ============ ESENCIA ============ */
     #esencia {
       background-color: var(--mud);
       padding: 8rem 0;
@@ -382,7 +370,7 @@
       min-height: 500px;
       background:
         linear-gradient(to bottom, rgba(8,7,5,1) 0%, rgba(8,7,5,0.1) 20%, rgba(8,7,5,0.1) 80%, rgba(8,7,5,1) 100%),
-        url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+        url('https://i.imgur.com/oSRcO2P.jpeg') center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -444,7 +432,7 @@
       color: var(--cream);
     }
 
-    /* ============ PRÓXIMAMENTE (CTA) ============ */
+    /* ============ PRÓXIMAMENTE ============ */
     #proximo {
       background-color: var(--black);
       padding: 10rem 0;
@@ -472,10 +460,8 @@
       line-height: 1.75;
     }
 
-    /* ===== EMAIL FORM ===== */
     .email-form {
       display: flex;
-      gap: 0;
       max-width: 420px;
       margin: 0 auto;
       border: 1px solid rgba(200, 184, 154, 0.25);
@@ -490,10 +476,7 @@
       font-family: var(--ff-body);
       font-size: 0.875rem;
       color: var(--cream);
-      letter-spacing: 0.04em;
     }
-
-    .email-form input::placeholder { color: rgba(200,184,154,0.35); }
 
     .email-form button {
       background: var(--ochre);
@@ -506,17 +489,6 @@
       color: var(--white);
       cursor: pointer;
       transition: background 0.3s;
-      white-space: nowrap;
-    }
-
-    .email-form button:hover { background: var(--terra); }
-
-    .form-note {
-      margin-top: 1rem;
-      font-size: 0.625rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(200, 184, 154, 0.35);
     }
 
     /* ============ FOOTER ============ */
@@ -536,58 +508,29 @@
       text-align: center;
     }
 
-    .footer-logo {
-      font-family: var(--ff-head);
-      font-style: italic;
-      font-size: 1.5rem;
-      color: var(--cream);
-    }
+    .footer-logo { font-family: var(--ff-head); font-style: italic; font-size: 1.5rem; color: var(--cream); }
 
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
+    .footer-links { display: flex; gap: 2.5rem; list-style: none; }
 
-    .footer-links a {
-      font-size: 0.625rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--sand);
-      opacity: 0.6;
-      transition: opacity 0.3s;
-    }
-    .footer-links a:hover { opacity: 1; }
+    .footer-links a { font-size: 0.625rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sand); opacity: 0.6; }
 
-    .footer-copy {
-      font-size: 0.5625rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(200, 184, 154, 0.2);
-    }
-
-    .footer-divider {
-      width: 40px;
-      height: 1px;
-      background: rgba(200, 184, 154, 0.15);
-    }
+    .footer-copy { font-size: 0.5625rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(200, 184, 154, 0.2); }
 
     /* ============ RESPONSIVE ============ */
     @media (max-width: 768px) {
-      .manifiesto-grid,
-      .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
-
+      .manifiesto-grid, .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
       .pilares { grid-template-columns: 1fr; }
-      .pilar { border-right: none; border-bottom: 1px solid rgba(200,184,154,0.1); }
-      .pilar:last-child { border-bottom: none; }
-
       nav .nav-links { display: none; }
+    }
+
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
   <nav aria-label="Navegación principal">
     <span class="nav-logo">Sabor a Tierra</span>
     <ul class="nav-links">
@@ -597,14 +540,13 @@
     </ul>
   </nav>
 
-  <!-- ===== HERO ===== -->
   <header id="hero" role="banner">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="label hero-eyebrow">No es solo comida. Es raíz.</p>
       <h1>Sabor a Tierra</h1>
       <p class="hero-sub">Ahí donde nace lo auténtico,<br>lo real… lo que se respeta.</p>
-      <span class="btn-outline" role="status" aria-label="Próximamente">Muy pronto</span>
+      <span class="btn-outline">Muy pronto</span>
     </div>
     <div class="hero-scroll" aria-hidden="true">
       <span>Scroll</span>
@@ -612,82 +554,60 @@
     </div>
   </header>
 
-  <!-- ===== MANIFIESTO ===== -->
-  <section id="manifiesto" aria-labelledby="manifiesto-title">
+  <section id="manifiesto">
     <div class="container">
       <div class="manifiesto-grid">
         <div class="manifiesto-text">
           <p class="label" style="margin-bottom:1.25rem;">Nuestra historia</p>
-          <h2 id="manifiesto-title">Volver al origen.</h2>
-          <p>
-            Sabor a Tierra nace de una idea simple pero poderosa: rescatar lo que siempre debió importar.
-            Creemos en el valor de hacer las cosas bien desde el inicio, respetando el proceso y el tiempo
-            que cada ingrediente necesita para llegar a su mejor versión.
-          </p>
-          <p style="margin-top:1.25rem;">
-            No seguimos tendencias. Seguimos la tierra, las temporadas, los productores que aún guardan
-            el conocimiento de generaciones pasadas.
-          </p>
+          <h2>Volver al origen.</h2>
+          <p>Sabor a Tierra nace de una idea simple pero poderosa: rescatar lo que siempre debió importar. Creemos en el valor de hacer las cosas bien desde el inicio, respetando el proceso y el tiempo.</p>
         </div>
         <div class="manifiesto-quote">
-          <blockquote>
-            "No seguimos tendencias.<br>Rescatamos la esencia."
-          </blockquote>
+          <blockquote>"No seguimos tendencias.<br>Rescatamos la esencia."</blockquote>
           <cite>— Sabor a Tierra</cite>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ESENCIA / PILARES ===== -->
-  <section id="esencia" aria-labelledby="esencia-title">
+  <section id="esencia">
     <div class="container">
       <div class="esencia-header">
         <p class="label">Lo que nos define</p>
-        <h2 id="esencia-title">Nuestra esencia</h2>
+        <h2>Nuestra esencia</h2>
       </div>
       <div class="pilares" role="list">
         <article class="pilar" role="listitem">
-          <div class="pilar-num" aria-hidden="true">01</div>
+          <div class="pilar-num">01</div>
           <h3>Selección</h3>
-          <p>Cada elemento es elegido por su pureza y conexión con el suelo. Trabajamos con productores que cuidan la tierra como si fuera propia porque lo es.</p>
+          <p>Cada elemento es elegido por su pureza y conexión con el suelo. Trabajamos con productores que cuidan la tierra.</p>
         </article>
         <article class="pilar" role="listitem">
-          <div class="pilar-num" aria-hidden="true">02</div>
+          <div class="pilar-num">02</div>
           <h3>Cuidado</h3>
-          <p>Transformamos sin destruir, manteniendo la historia de cada ingrediente. El proceso es tan importante como el resultado.</p>
+          <p>Transformamos sin destruir, manteniendo la historia de cada ingrediente. El proceso es el resultado.</p>
         </article>
         <article class="pilar" role="listitem">
-          <div class="pilar-num" aria-hidden="true">03</div>
+          <div class="pilar-num">03</div>
           <h3>Mesa</h3>
-          <p>Entendemos que lo que disfrutas empieza mucho antes de servirlo. La experiencia nace en el campo y termina en tu paladar.</p>
+          <p>La experiencia nace en el campo y termina en tu paladar. Respeto absoluto al origen.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== IMAGEN CENTRAL ===== -->
-  <div id="imagen" role="img" aria-label="Fotografía de un platillo artesanal representando la filosofía de Sabor a Tierra">
+  <div id="imagen" role="img" aria-label="Gastronomía de origen">
     <div class="imagen-quote">
       <p>"Lo mejor aún está por salir de la tierra."</p>
     </div>
   </div>
 
-  <!-- ===== EXPERIENCIA ===== -->
-  <section id="experiencia" aria-labelledby="exp-title">
+  <section id="experiencia">
     <div class="container">
       <div class="exp-grid">
         <div class="exp-text">
-          <p class="label" style="margin-bottom:1.25rem;">La experiencia</p>
-          <h2 id="exp-title">Una experiencia real.<br>Sin atajos.</h2>
-          <p>
-            No vienes solo a consumir. Vienes a conectar con lo auténtico, con lo que tiene historia.
-            Cada detalle está pensado para recordarte de dónde viene todo lo que ves en tu plato.
-          </p>
-          <p style="margin-top:1.25rem;">
-            La gastronomía de raíz no es nostalgia. Es responsabilidad. Es entender que cada bocado
-            es el resultado de trabajo, tierra y tiempo invertidos con intención.
-          </p>
+          <h2>Una experiencia real. Sin atajos.</h2>
+          <p>No vienes solo a consumir. Vienes a conectar con lo auténtico, con lo que tiene historia. Cada detalle está pensado para recordarte de dónde viene todo.</p>
         </div>
         <div class="exp-aside">
           <p>"Creemos en el valor de hacer las cosas bien desde el inicio."</p>
@@ -696,61 +616,30 @@
     </div>
   </section>
 
-  <!-- ===== PRÓXIMAMENTE / CTA ===== -->
-  <section id="proximo" aria-labelledby="proximo-title">
+  <section id="proximo">
     <div class="container">
       <p class="label" style="margin-bottom:1.25rem;">Esto apenas comienza</p>
-      <h2 id="proximo-title">Muy pronto.</h2>
-      <p>
-        Sé el primero en saber cuándo abrimos.<br>
-        Déjanos tu correo y te avisamos.
-      </p>
-
-      <form class="email-form" action="#" method="post" aria-label="Formulario para recibir novedades">
-        <label for="email-input" class="visually-hidden">Correo electrónico</label>
-        <input
-          id="email-input"
-          type="email"
-          name="email"
-          placeholder="tu@correo.com"
-          required
-          autocomplete="email"
-          aria-required="true"
-        />
+      <h2>Muy pronto.</h2>
+      <p>Sé el primero en saber cuándo abrimos. Déjanos tu correo.</p>
+      <form class="email-form">
+        <input type="email" placeholder="tu@correo.com" required />
         <button type="submit">Avisar</button>
       </form>
-      <p class="form-note">Sin spam. Solo lo que importa.</p>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer role="contentinfo">
     <div class="footer-inner">
       <span class="footer-logo">Sabor a Tierra</span>
-      <div class="footer-divider"></div>
-      <ul class="footer-links" aria-label="Redes sociales y contacto">
-        <li><a href="https://www.instagram.com/saboratierra" rel="noopener noreferrer" target="_blank" aria-label="Instagram de Sabor a Tierra">Instagram</a></li>
-        <li><a href="mailto:hola@saboratierra.com.mx" aria-label="Correo de contacto">Contacto</a></li>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/saboratierra" target="_blank">Instagram</a></li>
+        <li><a href="mailto:hola@saboratierra.com.mx">Contacto</a></li>
       </ul>
-      <div class="footer-divider"></div>
-      <p class="footer-copy">Sabor a Tierra &copy; 2026 &nbsp;·&nbsp; México &nbsp;·&nbsp; Todos los derechos reservados</p>
+      <p class="footer-copy">Sabor a Tierra &copy; 2026 &nbsp;·&nbsp; México</p>
     </div>
   </footer>
 
-  <!-- ===== VISUALLY HIDDEN (accesibilidad) ===== -->
-  <style>
-    .visually-hidden {
-      position: absolute;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0,0,0,0);
-      white-space: nowrap; border: 0;
-    }
-  </style>
-
-  <!-- ===== SCROLL ANIMATION (sin dependencias) ===== -->
   <script>
-    // Intersection Observer para fade-in en scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -762,19 +651,9 @@
     }, { threshold: 0.15 });
 
     document.querySelectorAll('section > .container > *, .pilar').forEach(el => {
-      el.style.cssText += 'opacity:0; transform:translateY(24px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);';
+      el.style.cssText += 'opacity:0; transform:translateY(24px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;';
       observer.observe(el);
     });
-
-    // Email form feedback
-    document.querySelector('.email-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('button');
-      btn.textContent = '¡Listo!';
-      btn.style.background = '#5c6645';
-      this.querySelector('input').value = '';
-    });
   </script>
-
 </body>
 </html>
