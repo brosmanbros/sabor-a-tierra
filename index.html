@@ -16,36 +16,22 @@
   <meta property="og:title" content="Sabor a Tierra | Gastronomía de Origen y Raíz" />
   <meta property="og:description" content="No es solo comida. Es raíz. Sabor a Tierra rescata la esencia de los ingredientes y el respeto por el proceso. Muy pronto." />
   <meta property="og:image" content="https://i.imgur.com/vV4PzIv.jpeg" />
-  <meta property="og:locale" content="es_MX" />
-  <meta property="og:site_name" content="Sabor a Tierra" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sabor a Tierra | Gastronomía de Origen" />
-  <meta name="twitter:description" content="Donde nace lo auténtico, lo real… lo que se respeta. Muy pronto." />
-  <meta name="twitter:image" content="https://i.imgur.com/vV4PzIv.jpeg" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Sabor a Tierra",
-    "description": "Gastronomía de origen que rescata el valor de los ingredientes auténticos y el respeto por el proceso.",
     "url": "https://saboratierra.com.mx",
     "servesCuisine": "Mexicana de autor",
     "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "MX"
-    },
-    "sameAs": [
-      "https://www.instagram.com/saboratierra"
-    ]
+    "address": { "@type": "PostalAddress", "addressCountry": "MX" }
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Raleway:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <style>
     /* ============ RESET & BASE ============ */
@@ -60,7 +46,6 @@
       --sand:     #c8b89a;
       --ochre:    #b07d3a;
       --terra:    #8b4513;
-      --olive:    #5c6645;
       --white:    #faf7f2;
       --ff-head:  'Playfair Display', Georgia, serif;
       --ff-body:  'Raleway', sans-serif;
@@ -76,10 +61,7 @@
       overflow-x: hidden;
     }
 
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ============ NOISE TEXTURE OVERLAY ============ */
+    /* ============ NOISE TEXTURE ============ */
     body::before {
       content: '';
       position: fixed;
@@ -87,17 +69,19 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 9999;
-      opacity: 0.35;
+      opacity: 0.25;
     }
 
-    /* ============ UTILITIES ============ */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    
     .label {
       font-family: var(--ff-body);
-      font-size: 0.6875rem;
-      letter-spacing: 0.28em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--sand);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
     /* ============ NAV ============ */
@@ -115,26 +99,24 @@
     .nav-logo {
       font-family: var(--ff-head);
       font-style: italic;
-      font-size: 1.125rem;
-      letter-spacing: 0.04em;
+      font-weight: 700;
+      font-size: 1.25rem;
       color: var(--cream);
     }
 
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
-      font-size: 0.6875rem;
+      font-size: 0.7rem;
+      font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--sand);
-      transition: color 0.3s;
     }
-    .nav-links a:hover { color: var(--cream); }
 
     /* ============ HERO ============ */
     #hero {
       position: relative;
       height: 100svh;
-      min-height: 640px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -148,7 +130,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(8,7,5,0.55) 0%, rgba(8,7,5,0.3) 40%, rgba(8,7,5,0.85) 100%),
+        linear-gradient(to bottom, rgba(8,7,5,0.6) 0%, rgba(8,7,5,0.3) 40%, rgba(8,7,5,0.85) 100%),
         url('https://i.imgur.com/1p4mkxM.jpeg') center / cover no-repeat;
       transform: scale(1.04);
       animation: heroScale 12s ease-in-out infinite alternate;
@@ -159,7 +141,7 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 760px;
+      max-width: 850px;
       animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
@@ -167,89 +149,89 @@
 
     h1 {
       font-family: var(--ff-head);
-      font-size: clamp(3.5rem, 9vw, 7rem);
-      font-weight: 700;
+      font-size: clamp(3.5rem, 10vw, 7.5rem);
+      font-weight: 900; /* Letra más gruesa */
       font-style: italic;
-      line-height: 1;
+      line-height: 0.9;
       color: var(--white);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.8); /* Sombra para resaltar */
     }
 
     .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      font-weight: 300;
-      color: var(--sand);
-      letter-spacing: 0.04em;
-      margin-bottom: 3rem;
-      line-height: 1.6;
+      font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+      font-weight: 600; /* De 300 a 600 */
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      margin-bottom: 3.5rem;
+      line-height: 1.4;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
     .btn-outline {
       display: inline-block;
-      border: 1px solid rgba(200, 184, 154, 0.5);
-      padding: 0.875rem 2.5rem;
+      border: 2px solid var(--sand);
+      padding: 1rem 3rem;
       font-family: var(--ff-body);
-      font-size: 0.6875rem;
+      font-size: 0.8rem;
+      font-weight: 800; /* Botón con más peso */
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--cream);
-      transition: background 0.4s, color 0.4s;
+      transition: all 0.4s;
+      background: rgba(0,0,0,0.2);
     }
 
     .btn-outline:hover { background: var(--cream); color: var(--black); }
 
-    /* ============ MANIFIESTO ============ */
-    #manifiesto { background-color: var(--dark); padding: 8rem 0; }
+    /* ============ MANIFIESTO & ESENCIA ============ */
+    #manifiesto, #esencia { padding: 10rem 0; background-color: var(--dark); }
     .manifiesto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .manifiesto-text h2 { font-family: var(--ff-head); font-size: 3rem; margin-bottom: 1.5rem; color: var(--white); }
-    .manifiesto-text p { font-size: 1rem; line-height: 1.85; color: var(--sand); font-weight: 300; }
-    .manifiesto-quote { border-left: 2px solid var(--ochre); padding: 2rem 2.5rem; background: var(--mud); }
-    .manifiesto-quote blockquote { font-family: var(--ff-head); font-style: italic; font-size: 1.375rem; color: var(--cream); }
-
-    /* ============ ESENCIA ============ */
-    #esencia { background-color: var(--mud); padding: 8rem 0; }
-    .esencia-header { text-align: center; margin-bottom: 5rem; }
-    .pilares { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .pilar { padding: 3rem 2.5rem; border-top: 1px solid rgba(200, 184, 154, 0.12); border-right: 1px solid rgba(200, 184, 154, 0.12); }
-    .pilar:last-child { border-right: none; }
-    .pilar-num { font-family: var(--ff-head); font-size: 3rem; font-weight: 700; color: var(--stone); margin-bottom: 1.5rem; }
-
-    /* ============ IMAGEN CENTRAL ============ */
+    h2 { font-family: var(--ff-head); font-weight: 800; font-size: 3.5rem; color: var(--white); margin-bottom: 2rem; }
+    
+    /* ============ BANNER IMAGEN CENTRAL ============ */
     #imagen {
-      height: 80vh;
+      height: 85vh;
       background:
-        linear-gradient(to bottom, rgba(8,7,5,1) 0%, rgba(8,7,5,0.1) 20%, rgba(8,7,5,0.1) 80%, rgba(8,7,5,1) 100%),
+        linear-gradient(to bottom, rgba(8,7,5,0.9) 0%, rgba(8,7,5,0.2) 50%, rgba(8,7,5,0.9) 100%),
         url('https://i.imgur.com/oSRcO2P.jpeg') center / cover no-repeat;
       display: flex; align-items: center; justify-content: center;
     }
 
+    .banner-text {
+      text-align: center;
+      color: white;
+      font-style: italic;
+      font-family: var(--ff-head);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800; /* Banner central más fuerte */
+      padding: 0 2rem;
+      text-shadow: 0 5px 20px rgba(0,0,0,0.9);
+      line-height: 1.2;
+    }
+
     /* ============ WHATSAPP CTA ============ */
-    #proximo { background-color: var(--black); padding: 10rem 0; text-align: center; }
+    #proximo { background-color: var(--black); padding: 12rem 0; text-align: center; }
     .wa-button {
       display: inline-block;
       background: var(--ochre);
       color: var(--white);
-      padding: 1.25rem 2.5rem;
+      padding: 1.5rem 3rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      font-weight: 700;
-      transition: background 0.3s, transform 0.3s;
-      margin-top: 2rem;
+      letter-spacing: 0.25em;
+      font-size: 0.85rem;
+      font-weight: 800;
+      transition: all 0.3s;
     }
-    .wa-button:hover { background: var(--terra); transform: translateY(-3px); }
+    .wa-button:hover { background: var(--terra); transform: scale(1.05); }
 
     /* ============ FOOTER ============ */
-    footer { background-color: var(--mud); padding: 4rem 2rem; border-top: 1px solid rgba(200, 184, 154, 0.08); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
-    .footer-links { display: flex; gap: 2.5rem; list-style: none; justify-content: center; margin: 2rem 0; }
-    .footer-links a { font-size: 0.625rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sand); opacity: 0.6; }
+    footer { background-color: var(--mud); padding: 5rem 2rem; }
+    .footer-copy { font-weight: 600; opacity: 0.5; }
 
-    /* ============ RESPONSIVE ============ */
     @media (max-width: 768px) {
-      .manifiesto-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .pilares { grid-template-columns: 1fr; }
-      nav .nav-links { display: none; }
+      .manifiesto-grid { grid-template-columns: 1fr; text-align: center; }
+      h2 { font-size: 2.5rem; }
     }
   </style>
 </head>
@@ -270,7 +252,7 @@
       <p class="label">No es solo comida. Es raíz.</p>
       <h1>Sabor a Tierra</h1>
       <p class="hero-sub">Ahí donde nace lo auténtico,<br>lo real… lo que se respeta.</p>
-      <span class="btn-outline">Muy pronto</span>
+      <a href="#proximo" class="btn-outline">Muy pronto</a>
     </div>
   </header>
 
@@ -280,44 +262,17 @@
         <div class="manifiesto-text">
           <p class="label">Nuestra historia</p>
           <h2>Volver al origen.</h2>
-          <p>Sabor a Tierra nace de una idea simple pero poderosa: rescatar lo que siempre debió importar. Respetamos el proceso y el tiempo que cada ingrediente necesita.</p>
+          <p style="font-size: 1.1rem; line-height: 1.8;">Sabor a Tierra nace de una idea simple pero poderosa: rescatar lo que siempre debió importar. Respetamos el proceso y el tiempo que cada ingrediente necesita.</p>
         </div>
-        <div class="manifiesto-quote">
-          <blockquote>"No seguimos tendencias.<br>Rescatamos la esencia."</blockquote>
-          <cite>— Sabor a Tierra</cite>
+        <div class="manifiesto-quote" style="border-left: 4px solid var(--ochre); padding-left: 2rem;">
+          <blockquote style="font-family: var(--ff-head); font-size: 1.8rem; font-weight: 700; font-style: italic;">"No seguimos tendencias. Rescatamos la esencia."</blockquote>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="esencia">
-    <div class="container">
-      <div class="esencia-header">
-        <p class="label">Lo que nos define</p>
-        <h2>Nuestra esencia</h2>
-      </div>
-      <div class="pilares">
-        <article class="pilar">
-          <div class="pilar-num">01</div>
-          <h3>Selección</h3>
-          <p>Cada elemento es elegido por su pureza y conexión con el suelo.</p>
-        </article>
-        <article class="pilar">
-          <div class="pilar-num">02</div>
-          <h3>Cuidado</h3>
-          <p>Transformamos sin destruir, manteniendo la historia de cada ingrediente.</p>
-        </article>
-        <article class="pilar">
-          <div class="pilar-num">03</div>
-          <h3>Mesa</h3>
-          <p>La experiencia nace en el campo y termina en tu paladar.</p>
-        </article>
       </div>
     </div>
   </section>
 
   <div id="imagen">
-    <div style="text-align: center; color: white; font-style: italic; font-family: 'Playfair Display'; font-size: 2rem; padding: 2rem;">
+    <div class="banner-text">
       "Lo mejor aún está por salir de la tierra."
     </div>
   </div>
@@ -325,8 +280,8 @@
   <section id="proximo">
     <div class="container">
       <p class="label">Esto apenas comienza</p>
-      <h2 style="font-family: 'Playfair Display'; font-style: italic; font-size: 4rem; color: white; margin-bottom: 1rem;">Muy pronto.</h2>
-      <p style="color: var(--sand); max-width: 500px; margin: 0 auto 2rem;">Sé el primero en saber cuándo abrimos. Escríbenos directamente para recibir noticias.</p>
+      <h2 style="font-style: italic; margin-bottom: 2rem;">Sabor genuino.</h2>
+      <p style="color: var(--sand); max-width: 600px; margin: 0 auto 3rem; font-weight: 600;">Sé el primero en saber cuándo abrimos. Escríbenos directamente para recibir noticias.</p>
       
       <a href="https://wa.me/529903100454?text=%C2%A1Hola!%20Quiero%20que%20me%20avisen%20cuando%20abra%20Sabor%20a%20Tierra." 
          target="_blank" class="wa-button">
@@ -336,31 +291,10 @@
   </section>
 
   <footer>
-    <div class="footer-inner">
-      <span class="footer-logo">Sabor a Tierra</span>
-      <ul class="footer-links">
-        <li><a href="https://www.instagram.com/saboratierra" target="_blank">Instagram</a></li>
-        <li><a href="https://wa.me/529903100454" target="_blank">WhatsApp</a></li>
-      </ul>
+    <div class="footer-inner container">
       <p class="footer-copy">Sabor a Tierra &copy; 2026 &nbsp;·&nbsp; México</p>
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section > .container > *, .pilar').forEach(el => {
-      el.style.cssText += 'opacity:0; transform:translateY(24px); transition: all 0.8s ease-out;';
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
